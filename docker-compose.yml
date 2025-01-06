@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app # Mount the current directory to /app inside the container
+    ports:
+      - "8000:8000"
+    networks:
+      - django_project
+
+networks:
+  django_project:
+    driver: bridge
