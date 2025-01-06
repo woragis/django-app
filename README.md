@@ -2,6 +2,46 @@
 
 ## Docker commands
 
+### Docker quickstart
+
+Start Containers
+
+```
+docker-compose build
+docker-compose up -d
+```
+
+Updated Dockerfile or docker-compose.yml
+
+```
+docker-compose up --build
+```
+
+Update database
+
+```
+docker-compose run web python manage.py makemigrations
+docker-compose run web python manage.py migrate
+```
+
+Stopping the containers
+
+```
+docker-compose down
+```
+
+See logs
+
+```
+docker-compose logs
+```
+
+See logs in real-time
+
+```
+docker-compose logs -f
+```
+
 ### Controlling commands
 
 - docker images # shows locally downloaded images
