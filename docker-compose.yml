@@ -1,13 +1,12 @@
-version: "3.8"
-
 services:
-  web:
+  django-project:
+    container_name: django-project
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8080
     volumes:
       - .:/app # Mount the current directory to /app inside the container
     ports:
-      - "8000:8000"
+      - "8080:8080"
     networks:
       - django_project
 

@@ -7,8 +7,6 @@ from django.urls import reverse
 from django.views import generic
 from django.utils.timezone import now
 
-# Create your views here.
-
 
 class IndexView(generic.ListView):
     template_name = "polls/index.html"
